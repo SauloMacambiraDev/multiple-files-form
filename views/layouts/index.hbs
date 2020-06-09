@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Working with HandleBars and multiple files from Front-end</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    {{!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> --}}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./form"><img id="img-logo" src="./assets/nodeJsLogo.png" alt="Logo da aplicação"></a>
+        <div class="nav-content">
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="#">Handlebars</a></li>
+                <li><a href="#">Multer</a></li>
+                <li><a href="#">MongoDB</a></li>
+            </ul>
+            <ul>
+
+            </ul>
+        </div>
+    </nav>
+    <main>
+        {{{body}}}
+    </main>
+
+</body>
+
+</html>

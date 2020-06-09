@@ -1,0 +1,215 @@
+/* Reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+}
+/* End reset css */
+
+body {
+    font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #2c3e50;
+}
+
+nav {
+	background-color: #FFF;
+	color: #c0392b;
+	font-size: 22px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav #img-logo{
+	width: 130px;
+	height: 80px;
+	object-fit: cover;
+	cursor: pointer;
+	margin: 5px 32px 0px 48px;
+}
+
+nav div.nav-content ul li{
+	display: inline-block;
+	/* background: yellow; */
+	margin-right: 8px;
+	border-bottom: 5px solid transparent;
+	transition: border-bottom 0.3s ;
+}
+nav div.nav-content ul li:hover{
+	border-bottom: 5px solid #2c3e50;
+}
+
+nav div.nav-content ul li a{
+	color: #2c3e50;
+	display: block;
+	width: inherit;
+	height: inherit;
+	padding: 40px;
+}
+main {
+	width: 80%;
+	/* height: 100vh; */
+	margin: 32px auto;
+	background: #FFF;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 10px;
+}
+
+main section#form-container{
+	display: flex;
+	min-height: 745px;
+}
+
+main section#form-container div.form-container-first-part,
+main section#form-container div.form-container-second-part
+{
+	position: relative;
+	/* height: 100%; */
+	flex: 1;
+}
+
+main section#form-container div.form-container-first-part div.background-cover{
+	background-color: #000;
+	opacity: 0.7;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	border-radius: 10px 0px 0px 10px;
+	z-index: 2;
+}
+
+main section#form-container div.form-container-first-part img.image-form-background{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px 0px 0px 10px;
+	z-index: 1;
+}
+
+main section#form-container div.form-container-first-part p{
+	z-index: 3;
+	color: #FFF;
+	font-size: 32px;
+	position: absolute;
+	top:20vh; 
+	left:5vw;
+	max-width: 25vw;
+	line-height: 1.6;
+}
+
+
+main section#form-container div.form-container-second-part{
+	padding: 32px;
+	text-align: center;
+	line-height: 1.3;
+}
+
+main section#form-container div.form-container-second-part form#form-multiple-files{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 24px;
+}
+
+main section#form-container div.form-container-second-part p.intro-form{
+	color: #2c3e50;
+	font-weight: 900;
+	margin: 32px 0px;
+}
+
+main section#form-container div.form-container-second-part label.custom-inputfile-form{
+	background-color: #2c3e50;
+	color: #FFF;
+	font-weight: 900;
+	padding: 16px 32px;
+	border-radius: 30px;
+	cursor: pointer;
+	/* box-shadow: 0 2px 4px 0 rgba(0, 0.5, 0.5, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+main section#form-container div.form-container-second-part input[type="file"]{
+	display: none;
+}
+
+main section#form-container div.form-container-second-part p.imported-files-message{
+	visibility: hidden;
+	color: #2ecc71;
+	font-weight: 900;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+main section#form-container div.form-container-second-part div.form-group{
+	width: 100%;
+	justify-content: start;
+}
+
+main section#form-container div.form-container-second-part input[type="email"]{
+	margin-top: 8px;
+	color: #2c3e50;
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+main section#form-container div.form-container-second-part input[type="email"]:focus{
+	outline: none
+}
+
+main section#form-container div.form-container-second-part input[type="submit"].btn-submit-form{
+	padding: 16px 32px;
+	background-color: #2c3e50;
+	border: none;
+	color: #FFF;
+	font-weight: 900;
+	font-size: 20px;
+	width: 300px;
+	cursor: pointer;
+	/* margin-top: 32px; */
+}

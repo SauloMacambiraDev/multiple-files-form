@@ -1,0 +1,67 @@
+
+header {
+    width: 100%;
+    padding: 32px 0;
+    /* background-color: #6600CC; */
+    background-image: linear-gradient(to right bottom, #CC00CC, #6600CC);
+    justify-content: center;
+    border-bottom: 3px solid rgba(51,0,102, 0.7);
+    clip-path: polygon(0 0%, 100% 0%, 100% 85%, 0% 98%);
+    padding-bottom: 64px;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+header div.card-header{
+    width: 320px;
+    min-height: 100px;
+    background-image: url('../assets/card-art.jpg');
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0px rgba(0,0,0, 0.8);
+    text-align: center;
+    transition: width 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+
+header div.card-header:hover{
+    width: 340px;
+}
+
+header div.card-header p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 900;
+    z-index: 1;
+}
+
+header div.card-header a{
+    display: inline-block;
+    /* background-color: #FF9999; */
+    background-color: rgba(255,153,153, 0.9);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 20px;
+}
+
+div#handlebars-content li {
+    font-size: 2rem;
+    width: 300px;
+    margin: 4px;
+    padding: 4px;
+    list-style: none
+}
+
+div#handlebars-content li.midlaner {
+    background-color: #eeeeee;
+}
+div#handlebars-content li.toplaner {
+    background-color: #ffea00;
+}

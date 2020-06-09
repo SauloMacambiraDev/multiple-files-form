@@ -1,0 +1,78 @@
+<section id="form-container">
+    {{!-- First Part of form page --}}
+    <div class="form-container-first-part">
+        <div class="background-cover"></div>
+        <img class="image-form-background" src="./assets/section-img.jpg" alt="">
+        <p>Algum texto inspirador para ocupar espaço nesta área da página :D</p>
+    </div>
+
+    {{!-- Second Part of form page --}}
+    <div class="form-container-second-part">
+        {{!-- <form id="form-multiple-files" action="uploadMultipleFiles" action="POST">
+            <p class="intro-form">Por favor selecione alguns arquivos em seu diretório para que possamos salvá-los em
+                nossa base</p>
+            <label class="custom-inputfile-form" for="files-client">Fazer upload de arquivos</label>
+            <input id="files-client" name="files-client" type="file" onchange='getLenOfFilesUploaded(event)' multiple>
+            <p id="multiple-files-msg" class="imported-files-message">Arquivo image.pdf carregado!</p>
+
+        </form> --}}
+
+        <form action="/posts" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">Por favor, nos forneça o email de sua conta para que possamos referenciar seu
+                    arquivo</label>
+                <input type="email" name="email" id="email" placeholder="Digite um e-mail">
+            </div>
+            <p class="intro-form">Por favor selecione alguns arquivos em seu diretório para que possamos salvá-los em
+                nossa base</p>
+            <label class="custom-inputfile-form" for="singleFile">Fazer upload de um arquivo</label>
+            <input id="singleFile" name="singleFile" type="file" onchange='getFileNameWithExt(event)'>
+            <p id="onefile-msg" class="imported-files-message">Arquivo image.pdf carregado!</p>
+
+            <input class="btn-submit-form" type="submit" value="Enviar">
+        </form>
+
+    </div>
+</section>
+<script type="text/javascript">
+    /*
+    function getLenOfFilesUploaded(event) {
+        console.log(event.target.files)
+
+        if (!event || !event.target || !event.target.files || event.target.files.length === 0) {
+            return;
+        }
+
+        const name = event.target.files[0].name;
+        const lastDot = name.lastIndexOf('.');
+
+        const fileName = name.substring(0, lastDot);
+        const ext = name.substring(lastDot + 1);
+
+        if (fileName && ext) {
+            const importFileMessageContent = document.getElementById('multiple-files-msg')
+            importFileMessageContent.innerHTML = `${event.target.files.length} arquivo(s) carregado(s)!`;
+            importFileMessageContent.style.visibility = "visible";
+        }
+    }
+    */
+
+    function getFileNameWithExt(event) {
+
+        if (!event || !event.target || !event.target.files || event.target.files.length === 0) {
+            return;
+        }
+
+        const name = event.target.files[0].name;
+        const lastDot = name.lastIndexOf('.');
+
+        const fileName = name.substring(0, lastDot);
+        const ext = name.substring(lastDot + 1);
+
+        if (fileName && ext) {
+            const importFileMessageContent = document.getElementById('onefile-msg')
+            importFileMessageContent.innerHTML = `Arquivo ${fileName}.${ext} carregado!`;
+            importFileMessageContent.style.visibility = "visible";
+        }
+    }
+</script>
